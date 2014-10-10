@@ -1,11 +1,11 @@
 @import "helpers";
-@import "fonts/clear-sans.css";
+//@import "fonts/clear-sans.css";
 
 $field-width: 500px;
 $grid-spacing: 15px;
 $grid-row-cells: 4;
 $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
-$tile-border-radius: 3px;
+$tile-border-radius: $tile-size / 2;
 
 $text-color: #776E65;
 $bright-text-color: #f9f6f2;
@@ -45,6 +45,7 @@ h1.title {
   display: block;
   float: left;
 }
+
 
 @include keyframes(move-up) {
   0% {
@@ -166,7 +167,7 @@ hr {
     -moz-user-select: none;
 
     background: $game-container-background;
-    border-radius: $tile-border-radius * 2;
+    border-radius: $tile-border-radius / 2;
     width: $field-width;
     height: $field-width;
     -webkit-box-sizing: border-box;
@@ -307,15 +308,15 @@ hr {
   // Colors for all 11 states, false = no special color
   $special-colors: false false, // 2
                    false false, // 4
-                   #f78e48 true, // 8
-                   #fc5e2e true, // 16
-                   #ff3333 true, // 32
-                   #ff0000 true, // 64
-                   false true, // 128
-                   false true, // 256
-                   false true, // 512
-                   false true, // 1024
-                   false true; // 2048
+                   "http://chcu.zitbrno.cz/wp-content/uploads/2014/07/mat-600x600.jpg" true, // 8
+                   "http://chcu.zitbrno.cz/wp-content/uploads/2014/07/kasparikova-600x600.jpg" true, // 16
+                   "http://chcu.zitbrno.cz/wp-content/uploads/2014/08/DSC03398-600x600.jpg" true, // 32
+                   false false, // 64
+                   false false, // 128
+                   false false, // 256
+                   false false, // 512
+                   false false, // 1024
+                   false false; // 2048
 
   // Build tile colors
   @while $exponent <= $limit {
@@ -332,15 +333,18 @@ hr {
       $bright-color: nth($nth-color, 2);
 
       @if $special-background {
-        $mixed-background: mix($special-background, $mixed-background, 55%);
+        background: url($special-background);
+        background-size: 165px 165px;
+        background-position: 50% 50%;
+        text-indent: -3000px; 
+        line-height: 3000px;
+        overflow: hidden;
+      } @else {
+        background-color: adjust_hue(#ff0000, 3.6deg * $gold_percent)
       }
 
-      @if $bright-color {
-        color: $bright-text-color;
-      }
+      color: white;
 
-      // Set background
-      background: $mixed-background;
 
       // Add glow
       $glow-opacity: max($exponent - 4, 0) / ($limit - 4);

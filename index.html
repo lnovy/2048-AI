@@ -2,20 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>2048</title>
+  <title>2048 - To prostě chceš</title>
 
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link href="style/ai.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
+  <link href="http://chcu.zitbrno.cz/wp-content/themes/chcu/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />		
+  <link href="//fonts.googleapis.com/css?family=Roboto&subset=latin-ext" rel="stylesheet" type="text/css" />		
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
 
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
-  <meta property="og:title" content="2048 game"/>
-  <meta property="og:site_name" content="2048 game"/>
-  <meta property="og:description" content="Join the numbers and get to the 2048 tile! Careful: this game is extremely addictive!"/>
-  <meta property="og:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png"/>
+  <meta property="og:title" content="CHCU hrát 2048."/>
+  <meta property="og:site_name" content="Hra 2048, ha jako Brno."/>
+  <meta property="og:description" content="Přidej se k těm, kteří se už dostali k políčku 2048. Chceš ještě do voleb."/>
+  <meta property="og:image" content="http://chcu.zitbrno.cz/wp-content/themes/chcu/images/CHCU_facebook_oimage2_tr.png"/>
 </head>
 <body>
   <div class="container">
@@ -23,23 +26,13 @@
       <h1 class="title">2048</h1>
       <div class="score-container">0</div>
     </div>
-    <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
-
-    <div class='controls'>
-      <div id='hint-button-container'>
-        <button id='hint-button' class='ai-button'>Get Hint</button>
-      </div>
-      <div id='feedback-container'> </div>
-      <div id='run-button-container'>
-        <button id='run-button' class='ai-button'>Auto-run</button>
-      </div>
-    </div>
+    <p class="game-intro">Protože číslo 11 není kouzelé jenom pro Brno. Přidej se k těm, kteří se už dostali k <stong>políčku 2048</strong>.  Stačí násobit dvoujku... Jewdenáctkát! (a nebo až do voleb).</p>
 
     <div class="game-container">
       <div class="game-message">
         <p></p>
         <div class="lower">
-          <a class="retry-button">Try again</a>
+          <a class="retry-button">Chceš znova</a>
           <div class="score-sharing"></div>
         </div>
       </div>
@@ -75,25 +68,36 @@
 
       </div>
     </div>
+    
+    <div class='controls'>
+      <div id='hint-button-container' style="display: none;">
+        <button id='hint-button' class='ai-button'>CHCU poradit!</button>
+      </div>
+      <div id='feedback-container'> </div>
+      <div id='run-button-container'>
+        <button id='run-button' class='ai-button'>Už NECHCEŠ? Pusť k tomu Onderku!</button>
+      </div>
+    </div>
+
 
     <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      <strong class="important">Jak na to:</strong> Použij <strong>šipky</strong> na svojí klávesnici k přesunování políček. Když se k sobě dostanou dvě stejná políčka, tak blízko, že se dotýkají, <strong>vynásobí se dvoukou,</strong> a splynou v jedno!
     </p>
     <hr>
     <p>
-    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    Původní autorskví náleží <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Založeno na hře<a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 od Veewo Studio</a> a koncpčně obdobné hře <a href="http://asherv.com/threes/" target="_blank">Threes od Asher Vollmer.</a>
     </p>
     <p>
-    AI solver by <a href="https://github.com/ov3y/2048-AI">Matt Overlan</a>
+    UI solver vyvořil <a href="https://github.com/ov3y/2048-AI">Matt Overlan</a>. Překlad a další drobnosti <a href="http://lmgtfy.com/?q=Lukas+Novy">krtek.net</a>.
     </p>
     <div class="sharing">
       <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out 2048, a game where you join numbers to score high! #2048game #2048ai" data-via="gabrielecirulli">Tweet</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       <span class="btc-donate">
-        <a href="bitcoin:1Ec6onfsQmoP9kkL3zkpB6c5sA4PVcXU2i">
-          <img src="meta/icon_bitcoin.png">Donate
+        <a href="bitcoin:1DFA5M5Sn9hLNDfUNQRbeWUwQsc3rDzGKs">
+          <img src="meta/icon_bitcoin.png">Darovat
         </a>
-        <span class="address"><code>1Ec6onfsQmoP9kkL3zkpB6c5sA4PVcXU2i</code></span>
+        <span class="address"><code>1DFA5M5Sn9hLNDfUNQRbeWUwQsc3rDzGKs</code></span>
       </span>
     </div>
   </div>
@@ -114,7 +118,7 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
 
-    ga("create", "UA-42620757-2", "gabrielecirulli.github.io");
+    ga("create", "UA-55593215-1", "2048.lnovy.github.io");
     ga("send", "pageview");
   </script>
 </body>

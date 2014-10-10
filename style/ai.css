@@ -7,6 +7,15 @@
 .ai-button, #feedback-container {
   font-size: xx-large;
 }
+button.ai-button {
+  background: #8ebf28;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+}
+.ai-button:hover {
+  background: url(http://chcu.zitbrno.cz/wp-content/themes/chcu/images/CHCU_HR.gif);
+}
 
 #run-button-container {
   float: right;
